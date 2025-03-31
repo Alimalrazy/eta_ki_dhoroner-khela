@@ -76,12 +76,27 @@ function moveObstacle() {
     }, 20);
 }
 
-// Event listener for jump on up arrow key press
 document.addEventListener('keydown', (event) => {
-    if (event.code === 'ArrowUp') {
-        jump();
-    }
+    jump(); // Trigger jump on any key press
 });
+
+document.addEventListener('touchstart', (event) => {
+    event.preventDefault(); // Prevent screen scroll
+    if (!isAudioStarted) {
+        backgroundAudio.play();
+        isAudioStarted = true;
+    }
+    jump();
+});
+
+// Add this function to start game on any touch
+
+function startGame() {
+    if (!isAudioStarted) {
+        backgroundAudio.play();
+        isAudioStarted = true;
+    }
+}
 
 // Function to update score
 function updateScore() {
