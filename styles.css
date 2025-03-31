@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    background-image: url('july.avif');
+    background-size: cover; /* This will make the image cover the container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image repeating */
+}
+
+#dino {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    width: 100px; /* Adjusted width for better visibility */
+    height: 150px; /* Adjusted height for better visibility */
+    background-image: url('hasu.jpg'); /* Use hasu.jpg as the image */
+    background-size: contain; /* Ensure the image fits within the element */
+    /*background-repeat: no-repeat; /* Prevent the image from repeating */
+    /*transition: bottom 0.2s;
+}
+
+.running {
+    animation: run 1s infinite; /* Adjusted duration for the animation */
+}
+
+@keyframes run {
+    0% {
+        background-position: 0;
+    }
+    50% {
+        background-position: -80px; /* Adjust based on sprite width */
+    }
+    100% {
+        background-position: -160px; /* Adjust based on sprite width */
+    }
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 40px;
+    width: 50px; /* Adjust as needed based on your image */
+    height: 50px; /* Adjust as needed based on your image */
+    /* Instead of background-color, use background-image */
+    background-image: url('poop.png'); /* Replace with the actual path to your image */
+    background-size: contain; /* Or 'cover' or specify width and height in pixels/percentages */
+    background-repeat: no-repeat; /* To prevent the image from tiling */
+}
+
+#ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #8B4513;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #333;
+}
