@@ -5,7 +5,6 @@ let score = 0;
 let isJumping = false;
 let obstacle;
 
-
 // Function to make the dinosaur jump
 function jump() {
     if (isJumping) return;
@@ -30,7 +29,6 @@ function jump() {
 }
 
 const collisionAudio = new Audio('khela.m4a'); // Load the audio file
-// Add this audio declaration at the top with other variables
 const backgroundAudio = new Audio('joyBangla.m4a');  // <-- Add this line
 backgroundAudio.loop = true;  // <-- Make it loop
 
@@ -89,14 +87,10 @@ document.addEventListener('touchstart', (event) => {
     jump();
 });
 
-// Add this function to start game on any touch
-
-function startGame() {
-    if (!isAudioStarted) {
-        backgroundAudio.play();
-        isAudioStarted = true;
-    }
-}
+// Add mouse click event listener
+document.addEventListener('click', (event) => {
+    jump(); // Trigger jump on mouse click
+});
 
 // Function to update score
 function updateScore() {
